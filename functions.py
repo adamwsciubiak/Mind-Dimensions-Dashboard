@@ -24,13 +24,13 @@ def load_selected_local_datasets(study_numbers_to_load: list):
     datasets = []
     if not study_numbers_to_load: return []
     if 1 in study_numbers_to_load:
-        try: datasets.append(pd.read_csv('data/bodyheartmind_study1.csv'))
+        try: datasets.append(pd.read_csv("https://raw.githubusercontent.com/adamwsciubiak/Mind-Dimensions-Dashboard/main/Data/bodyheartmind_study1.csv"))
         except FileNotFoundError: print("Error: bodyheartmind_study1.csv not found.")
     if 2 in study_numbers_to_load:
-        try: datasets.append(pd.read_csv('data/bodyheartmind_study2.csv'))
+        try: datasets.append(pd.read_csv("https://raw.githubusercontent.com/adamwsciubiak/Mind-Dimensions-Dashboard/main/Data/bodyheartmind_study2.csv"))
         except FileNotFoundError: print("Error: bodyheartmind_study2.csv not found.")
     if 4 in study_numbers_to_load:
-        try: datasets.append(pd.read_csv('data/bodyheartmind_study4.csv'))
+        try: datasets.append(pd.read_csv("https://raw.githubusercontent.com/adamwsciubiak/Mind-Dimensions-Dashboard/main/Data/bodyheartmind_study4.csv"))
         except FileNotFoundError: print("Error: bodyheartmind_study4.csv not found.")
     if not datasets: print("Error: None of the selected dataset files were found.")
     return datasets
